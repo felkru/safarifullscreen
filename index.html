@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body {
+    	padding: 1rem;
+    	font-family: Helvetica, Arial, sans-serif;
+    }
+    
+    button {
+    	background: #2be;
+        border: 0;
+        border-radius: 50px;
+        padding: 0.5rem;
+    }
+    
+    #lsb {
+    	position: fixed;
+    }
+</style>
+<script>
+	function fullscreen() {
+		if (document.webkitFullscreenElement) {
+      document.webkitCancelFullScreen();
+          	document.getElementById("fsb").innerHTML = "Click here for Fullscreen";
+    } else {
+      const el = document.documentElement;
+      el.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    	document.getElementById("fsb").innerHTML = "Click here to exit Fullscreen Mode";
+    }
+    }
+</script>
+<body>
+<h1>IOS Fullscreen Browser Demo</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non turpis sed lacus ultricies mollis ut quis odio. Vestibulum at tempor ligula. Nunc erat dui, tristique sed interdum vel, lacinia a lorem. Donec metus sem, cursus et mauris et, elementum cursus tellus. Aliquam erat volutpat. Mauris venenatis condimentum turpis ac ornare. Nunc eget ante non sem auctor sollicitudin. Sed consectetur ac enim nec pretium.</p>
+<button onclick="fullscreen()" id="fsb">Click here for Fullscreen</button>
+</body>
+
+</html>
